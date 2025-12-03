@@ -1,0 +1,19 @@
+[project]
+name = "django-crud"
+version = "0.1.0"
+description = "Make CRUD with Django using the admin panel"
+authors = [
+    {name = "Pedro Henrique",email = "seu-email-no-pedrohenrisilva31@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "django (>=5.2.6,<6.0.0)",
+    "psycopg-binary (>=3.2.10,<4.0.0)",
+    "psycopg[binary] (>=3.2.10,<4.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
