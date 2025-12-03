@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<form action="" method="post">
+    nome: <input type="text" name="nomeForm" id=""><br>
+    email: <input type="email" name="emailForm" id=""><br><br>
+    <input type="submit" value="Enviar">
+</form>
+
+{% if name and email %}
+    <h1>Usuário Cadastrado:</h1>
+    <h2>name: {{ name }}</h2>
+    <h2>Email: {{ email }}</h2>
+{% endif %}
+
+<a href="{{ url_for('home') }}">
+    <button>Voltar</button>
+</a>
+
+{% endblock %}

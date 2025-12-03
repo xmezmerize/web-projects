@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Olá, {{dados.nome | upper}}</h2>
+<h2>Olá, {{dados.nome | lower}}</h2>
+<h2>Olá, {{dados.nome | capitalize}}</h2>
+<h2>Olá, {{dados.nome | title}}</h2>
+<h2>Olá, {{dados.nome | length}}</h2>
+<h2>Olá, {{dados.nome | default('sem nome')}}</h2>
+<h3>Olá, {{dados.nome}}</h3>
+<h3>Eu sou {{dados.profissão}}</h3>
+<h3>Esse projeto é um {{dados.projeto}}</h3>
+<h4>{{valor}}</h4>
+<h4>{{valor | round(2)}}</h4>
+<h4>{{ valor | int}}</h4>
+<h4>{{ valor | float}}</h4>
+
+<a href="{{ url_for('home') }}">
+    <button>Voltar</button>
+</a>
+
+{% endblock %}

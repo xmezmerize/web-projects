@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Página de Testes<br></h1>
+<h1>Olá, {{ nome }}</h1>
+<a href="{{ url_for('home') }}">
+    <button>Voltar</button>
+</a>
+
+{% if idade >= 18 %}
+    <p>Você é maior de idade</p>
+{% else %}
+    <p>Você é menor de idade</p>
+{% endif %}
+
+<ul>
+    {% for fruta in frutas %}
+        <li>{{ fruta }}</li>
+    {% else %}
+        <p>Sem frutas!</p>    
+    {% endfor %}
+</ul>
+
+{% endblock %}

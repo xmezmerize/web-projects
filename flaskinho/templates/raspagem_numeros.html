@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form action="" method="post">
+    Digite o número: <input type="text" name="numForm">
+    <input type="submit" value="Enviar">
+</form>
+<br>
+
+{% if numeros %}
+    <ul>
+    {% for digito, tipo in numeros %}
+        <li>{{ digito }} → {{ tipo }}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>Nenhum número processado ainda.</p>
+{% endif %}
+
+<a href="{{ url_for('home') }}">
+    <button>Voltar</button>
+</a>
+{% endblock %}

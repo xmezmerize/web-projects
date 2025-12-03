@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form action="" method="post">
+    Peso (Kg): <input type="number" step="0.1" name="pesoForm"><br>
+    Altura (m): <input type="number" step="0.01" name="alturaForm"><br><br>
+    <input type="submit" value="Calcular IMC">
+</form>
+<br>
+
+{% if calculo %}
+    <h2>Seu IMC é: {{ calculo }}</h2>
+
+    {% if calculo <= 18.5 %}
+        <p>Magreza</p>
+    {% elif calculo > 18.5 and calculo <= 24.9 %}
+        <p>Saudável</p>
+    {% elif calculo > 24.9 and calculo <= 29.9 %}
+        <p>Sobrepeso</p>
+    {% else %}
+        <p>Obesidade</p>
+    {% endif %}
+
+{% endif %}
+
+<a href="{{ url_for('home') }}">
+        <button>Voltar</button>
+    </a>
+{% endblock %}
